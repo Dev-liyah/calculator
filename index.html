@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="border">
+        <div class="calculator-div">
+            <h3>Calculator</h3>
+            <div class="input">
+                <input type="text" placeholder="input number" id="input1">
+                <input type="text" placeholder="input number" id="input2">
+            </div>
+            <div class="big-btn">
+                <div class="btn">
+                    <button id="btn-1" onclick="add()">+</button>
+                    <button id="btn-2" onclick="multiply()">*</button>
+                    <button id="btn-3" onclick="divide()">/</button>
+                    <button id="btn-4" onclick="minus()">-</button>
+                </div>
+                <div id="output">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let firstInput1 = document.getElementById('input1')
+    let secondInput1 = document.getElementById('input2')
+    let result2 = document.getElementById('output')
+
+    function add() {
+        let answer = Number(firstInput1.value) + Number(secondInput1.value)
+        result2.textContent = answer
+    }
+
+    function multiply() {
+        let answer = Number(firstInput1.value) * Number(secondInput1.value)
+        result2.textContent = answer
+    }
+
+    function divide() {
+        let answer = Number(firstInput1.value) / Number(secondInput1.value)
+        result2.textContent = answer
+    }
+
+    function minus() {
+        let answer = Number(firstInput1.value) - Number(secondInput1.value)
+        result2.textContent = answer
+    }
+</script>
